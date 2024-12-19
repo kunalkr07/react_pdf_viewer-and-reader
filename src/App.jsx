@@ -21,7 +21,7 @@ export default function App() {
 
         <Routes>
           <Route
-            path="/"
+            path="/pdfList"
             element={<PDFList searchQuery={searchQuery} />}
           ></Route>
           <Route path="/about" element={<About />}></Route>
