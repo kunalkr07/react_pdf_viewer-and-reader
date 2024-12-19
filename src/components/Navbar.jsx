@@ -1,5 +1,4 @@
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import React, { useState } from "react";
 
 export default function Navbar({ onSearch }) {
@@ -39,8 +38,7 @@ export default function Navbar({ onSearch }) {
 
         {/* serach bar starts */}
         <div className="search">
-
-        <FontAwesomeIcon icon={faSearch} className="search-icon" />
+      <i class="search-icon fa-solid fa-magnifying-glass"></i>
           <input
             type="search"
             value={input}

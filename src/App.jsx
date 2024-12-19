@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import Navbar from './components/Navbar'
-import PDFList from './components/PdfList'
+import PDFList from './components/PDFList'
 import Footer from './components/Footer'
 
 export default function App() {
