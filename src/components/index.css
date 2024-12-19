@@ -389,6 +389,10 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     .subscribe-box input {
       width: 100%;
     }
+
+    .image-container{
+      display: none;
+    }
   }
   
   /* Footer Section */
