@@ -44,7 +44,7 @@ export default function Navbar({ onSearch }) {
           className="fa-duotone fa-solid fa-hexagon-nodes"
           onClick={toggleSidebar}
         ></i>
-          <h3>PDFify</h3>
+          <h3><Link to="/">PDFify</Link></h3>
         </div>
 
         <ul className={`links ${isOpen ? "active" : ""} animate__animated animate__backInLeft`}>

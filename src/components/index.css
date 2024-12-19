@@ -29,7 +29,10 @@ nav {
   justify-content: center;
   align-items: center;
 }
-
+.logo-name>h3>a{
+    text-decoration: none;
+    color:#ff6600;
+}
 nav > ul {
   display: flex;
   position: absolute;
