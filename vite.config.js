@@ -7,7 +7,7 @@ export default defineConfig({
     rollupOptions: {
       external: [
         "@fortawesome/free-solid-svg-icons", 
-        "react-router-dom" // Add react-router-dom here
+        // Remove react-router-dom from here
       ],
     },
   },
