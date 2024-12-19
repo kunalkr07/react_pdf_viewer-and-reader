@@ -7,9 +7,10 @@ export default function Navbar({ onSearch }) {
   const [isOpen, setOpen] = useState(false);
   
 
-  let navbar = document.querySelector("nav");
   // Navbar scroll function
   window.addEventListener("scroll", () => {
+    let navbar = document.querySelector("nav");
+
     if (window.scrollY > 30) {
       navbar.classList.add("background");
     } else {
@@ -40,6 +41,11 @@ export default function Navbar({ onSearch }) {
    
   };
 
+  //close sidebar when click on mark
+  const closeTab=()=>{
+    setOpen(false)
+  }
+
   return (
     <div>
       <nav>
@@ -48,10 +54,12 @@ export default function Navbar({ onSearch }) {
           className="fa-duotone fa-solid fa-hexagon-nodes"
           onClick={toggleSidebar}
         ></i>
-          <h3>myLogo</h3>
+          
         </div>
 
-        <ul className={`links ${isOpen ? "active" : ""} animate__animated animate__backInLeft`}>
+        <ul className={`links ${isOpen ? "active" : ""} animate__animated animate__backInDown`}>
+
+        <i className="fa-solid fa-x mark" onClick={closeTab}></i>
           <li>
             <Link to="/about">About</Link>
           </li>

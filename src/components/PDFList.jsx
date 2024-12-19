@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook
 
 export default function PDFList({ searchQuery }) {
   const [file, setFile] = useState([]);
+  const navigate = useNavigate(); // Initialize the navigate function
 
   // Fetch data from the API
   useEffect(() => {
@@ -18,6 +20,11 @@ export default function PDFList({ searchQuery }) {
     item.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  const handlePdfSelect = (pdfLink) => {
+    // Navigate to PDF viewer route and pass the pdfLink in state
+    navigate("/pdf-viewer", { state: { pdfUrl: pdfLink } });
+  };
+
   return (
     <div className="list-container">
       {filteredFiles.length > 0 ? (
@@ -33,10 +40,11 @@ export default function PDFList({ searchQuery }) {
                 {element.published}
               </h5>
               <p className="card-text">{element.author}</p>
-              <button className="element-btn">
-                <a href={element.link} target="_blank" className="card-link">
-                  View PDF
-                </a>
+              <button
+                className="element-btn"
+                onClick={() => handlePdfSelect(element.link)} // Navigate to the PDF viewer
+              >
+                View PDF
               </button>
             </div>
           </div>
