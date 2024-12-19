@@ -22,16 +22,7 @@ const Footer = () => {
         <ul className="footer-links">
       
           
-          <li>
-            <span className="social-icons">
-              <i className="fab fa-facebook" />
-              <i className="fab fa-twitter" />
-              <i className="fab fa-youtube" />
-              <i className="fab fa-instagram" />
-              <i className="fab fa-linkedin" />
-              <i className="fab fa-behance" />
-            </span>
-          </li>
+        
         </ul>
         <div className="footer-logo">
           <h3>

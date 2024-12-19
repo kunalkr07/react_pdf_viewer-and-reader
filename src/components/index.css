@@ -29,21 +29,25 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.logo-name>h3>a{
-    text-decoration: none;
+.logo-name>h3{
     color:#ff6600;
 }
+.logo-name>li>a{
+    font-size: 20px;
+}
+
 nav > ul {
   display: flex;
   position: absolute;
   top: 60px;
   text-align: center;
-  width: 25%;
+  width: 100%;
   transition: 0.5s;
   left: -100%;
   background-color: #dddddd1d;
   backdrop-filter: blur(10px);
-  height: 100vh;
+  /* height: 100%; */
+  min-height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +65,7 @@ nav > ul > li {
 nav > ul > li > a {
   text-decoration: none;
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 500;
   color: #ff6600;
 }
@@ -111,7 +115,15 @@ nav > ul.active {
 /* Responsive Navbar */
 @media (max-width: 768px) {
   .search > input {
-    width: 200px;
+    width: 250px;
+  }
+  nav{
+    flex-direction: column;
+    padding:20px 0px;
+   gap: 5px;
+  }
+  nav>ul{
+    top:110px;
   }
 }
 
@@ -140,6 +152,7 @@ nav > ul.active {
   margin: 10px;
   width: 100%;
   max-width: 300px;
+  transition: 0.5;
 }
 
 .card-body {
@@ -149,6 +162,13 @@ nav > ul.active {
   align-items: center;
   flex-direction: column;
   text-align: center;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    transition: 0.5s;
+    background: rgb(6,5,6);
+    background: linear-gradient(90deg, rgba(6,5,6,1) 0%, rgba(12,30,54,1) 100%);
 }
 
 .element-btn {
@@ -185,20 +205,71 @@ nav > ul.active {
     align-items: center;
   }
 
+  
+
   .card {
     max-height: 200px;
     overflow: hidden;
   }
 }
 
+
+/* about section */
+
+.section-container {
+    background: rgb(52,35,52);
+    background: linear-gradient(90deg, rgba(52,35,52,1) 0%, rgba(21,28,38,1) 100%);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    top:50px;
+    min-height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+  .content-section{
+    text-align: left;
+    padding:20px ;
+  }
+  
+  .section-container h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color:#ff6600;
+  }
+  
+  .section-container h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .section-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto 40px auto;
+    max-width: 600px;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+height:300px;
+width:300px;
+    background-image: url('../assets/rb_4735.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  
 /* Subscribe Section */
 .subscribe-section {
-  background: rgb(80, 46, 74);
-  background: linear-gradient(
-    90deg,
-    rgba(80, 46, 74, 1) 0%,
-    rgba(31, 57, 93, 1) 100%
-  );
+    background: rgb(6,5,6);
+    background: linear-gradient(90deg, rgba(6,5,6,1) 0%, rgba(12,30,54,1) 100%);
   text-align: center;
   padding: 40px 20px;
   margin-top: 50px;
@@ -273,7 +344,7 @@ footer {
 .footer-bottom-links {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -283,7 +354,10 @@ footer {
   cursor: pointer;
   font-size: 0.9rem;
   color: #333;
+  
+
 }
+
 
 .footer-links li:hover,
 .footer-bottom-links li:hover {

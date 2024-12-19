@@ -1,10 +1,10 @@
-import React,{useState} from 'react'
-import Navbar from './components/Navbar'
-import PDFList from './components/PDFList'
-import Footer from './components/Footer'
-import Contact from './components/Contact'
-import About from './components/About'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React, { useState } from "react";
+import Navbar from "./components/Navbar";
+import PDFList from "./components/PDFList";
+import Footer from "./components/Footer";
+import About from "./components/About";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import PDFViewer from "./components/PDFViewer";
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -16,15 +16,18 @@ export default function App() {
   return (
     <div>
       <BrowserRouter>
-      <Navbar  onSearch={handleSearch}/>
-      <Routes>
-        <Route path='/' element={<PDFList searchQuery={searchQuery}/>}></Route>
-        <Route path='/contact' element={<Contact/>}></Route>
-        <Route path='/about' element={<About/>}></Route>
-      </Routes>
-      <Footer/>
+        <Navbar onSearch={handleSearch} />
+     <PDFViewer/>
+
+        <Routes>
+          <Route
+            path="/"
+            element={<PDFList searchQuery={searchQuery} />}
+          ></Route>
+          <Route path="/about" element={<About />}></Route>
+        </Routes>
+        <Footer />
       </BrowserRouter>
-      
     </div>
-  )
+  );
 }

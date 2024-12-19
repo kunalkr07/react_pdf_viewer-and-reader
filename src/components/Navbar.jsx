@@ -5,6 +5,7 @@ import 'animate.css';
 export default function Navbar({ onSearch }) {
   const [input, setInput] = useState("");
   const [isOpen, setOpen] = useState(false);
+  
 
   let navbar = document.querySelector("nav");
   // Navbar scroll function
@@ -33,7 +34,10 @@ export default function Navbar({ onSearch }) {
   //toggle sidebar
   const toggleSidebar = () => {
     console.log("toggled side bar");
-    setOpen((prev) => !prev);
+   
+      setOpen((prev) => !prev);
+   
+   
   };
 
   return (
@@ -44,17 +48,15 @@ export default function Navbar({ onSearch }) {
           className="fa-duotone fa-solid fa-hexagon-nodes"
           onClick={toggleSidebar}
         ></i>
-          <h3><Link to="/">PDFify</Link></h3>
+          <h3>myLogo</h3>
         </div>
 
         <ul className={`links ${isOpen ? "active" : ""} animate__animated animate__backInLeft`}>
-          <p>Here you can go to different parts of the application</p>
           <li>
             <Link to="/about">About</Link>
           </li>
-          <li>
-            <Link to="contact">contact</Link>
-          </li>
+          <h5>It is a simple and efficient tool designed to streamline document management. With this project, <br /> you can create, organize, and download PDF files with ease. <br />Whether you're looking to compile your resume, manage reports, or store essential files,<br /> PDFList offers a user-friendly interface and seamless functionality to meet your needs.</h5>
+         
   
         </ul>
 
