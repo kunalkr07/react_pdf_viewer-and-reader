@@ -35,7 +35,11 @@ export default function Navbar({ onSearch }) {
         <div className="logo-name">
           <h3>PDFify</h3>
         </div>
+       
+
+        {/* serach bar starts */}
         <div className="search">
+
         <FontAwesomeIcon icon={faSearch} className="search-icon" />
           <input
             type="search"
