@@ -8,4 +8,7 @@ export default defineConfig({
       external: ['@fortawesome/free-solid-svg-icons'],
     },
   },
+  optimizeDeps: {
+    include: ['react-router-dom']
+  }
 });
