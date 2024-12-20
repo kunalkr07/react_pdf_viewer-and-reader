@@ -16,25 +16,26 @@ const Footer = () => {
         <button>Subscribe</button>
       </div>
     </section>
+
+
     {/* Footer Section */}
     <footer>
       <div className="footer-container">
-        <ul className="footer-links">
-      
-          
-        
-        </ul>
         <div className="footer-logo">
           <h3>
             <span className="logo-dot" /> <span className="logo-name">my</span>
             <b>Logo</b>
           </h3>
         </div>
-        <ul className="footer-bottom-links">
+
+        <div className="footer-bottom-links">
+        <ul >
           <li>Privacy Policy</li>
           <li>Terms of Use</li>
           <li>Site Map</li>
         </ul>
+          
+        </div>
       </div>
     </footer>
   </>

@@ -36,7 +36,7 @@ export default function PDFList({ searchQuery }) {
           >
             <div className="card-body">
               <h5 className="card-title">{element.name}</h5>
-              <h5 className="card-subtitle mb-2 text-dark-emphasis">
+              <h5 className="card-subtitle mb-2 text-warning">
                 {element.published}
               </h5>
               <p className="card-text">{element.author}</p>

@@ -53,13 +53,18 @@ export default function Navbar({ onSearch }) {
           ></i>
         </div>
 
+        {/* links */}
+
         <ul
           className={`links ${
             isOpen ? "active" : ""
           } animate__animated animate__backInDown`}
         >
-          <i className="fa-solid fa-x mark" onClick={closeTab}></i>
-          <li>
+          <button className="mark-btn">
+            {" "}
+            <i className="fa-solid fa-x mark" onClick={closeTab}></i>
+          </button>
+          <li className="about">
             <Link to="/about">About</Link>
           </li>
           <h5>
